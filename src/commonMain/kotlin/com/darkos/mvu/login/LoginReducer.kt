@@ -33,7 +33,7 @@ class LoginReducer<State : MVUState, Request : Any> private constructor(
                     fieldId = it.fieldId,
                     newValue = (message as FieldValueChanged).newValue
                 ).let {
-                    validationProcessor.processValidationMessage(state, it)
+                    validationProcessor.processOtherMessage(state, it)
                 }
             }
         }
