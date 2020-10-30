@@ -163,7 +163,8 @@ class LoginReducer<State : MVUState, Request : Any> private constructor(
 
     data class ValidationState(
         val id: Long,
-        val valid: Boolean
+        val valid: Boolean,
+        val value: String
     )
 
     data class ValidationChangeMessage(
@@ -188,7 +189,8 @@ class LoginReducer<State : MVUState, Request : Any> private constructor(
                 validationState.fields.map {
                     ValidationState(
                         id = it.id,
-                        valid = it.status == FieldValidationStatus.VALID
+                        valid = it.status == FieldValidationStatus.VALID,
+                        value = it.value
                     )
                 }.let {
                     block(state, it)
