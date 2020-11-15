@@ -20,7 +20,7 @@ class WithoutValidationReducer<T : MVUState> private constructor(//todo: split t
         return if (valueChangedMessage.isInstance(message)) {
             StateCmdData(
                 state = state.copy(value = (message as FieldValueChanged).newValue),
-                effect = None()
+                effect = None
             )
         } else {
             throw IllegalArgumentException()

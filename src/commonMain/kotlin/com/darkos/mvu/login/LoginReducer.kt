@@ -1,11 +1,11 @@
 package com.darkos.mvu.login
 
 import com.darkos.mvu.Reducer
+import com.darkos.mvu.common.map
 import com.darkos.mvu.login.model.FieldValueChanged
 import com.darkos.mvu.login.model.WithoutValidationField
 import com.darkos.mvu.login.model.mvu.LoginEffect
 import com.darkos.mvu.login.model.mvu.LoginMessage
-import com.darkos.mvu.map
 import com.darkos.mvu.models.MVUState
 import com.darkos.mvu.models.Message
 import com.darkos.mvu.models.StateCmdData
